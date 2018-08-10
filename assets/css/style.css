@@ -1,0 +1,152 @@
+/* Fonts */
+@font-face {
+    font-family: 'FE-Font';
+    src: url('FE-Font.woff2') format('woff2'),
+        url('FE-Font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  /* SASS Variables */
+  /* HTML */
+  * {
+    box-sizing: border-box;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg, rgb(180, 46, 5), rgb(63, 122, 45), rgb(192, 190, 54), black);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite; }
+  
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%; }
+    50% {
+      background-position: 100% 50%; }
+    100% {
+      background-position: 0% 50%; } }
+  button {
+    cursor: pointer; }
+  
+  h1 {
+    font-family: 'FE-Font';
+    letter-spacing: -0.4rem;
+    padding: 2rem 0 1rem 0; }
+  
+  /* CUSTOM SELECTORS */
+  .header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem; }
+    .header .display-1 {
+      color: #ffffff;
+      white-space: nowrap; }
+    .header .accent {
+      display: inline-block;
+      color: rgb(180, 46, 5);
+      animation: Cycler 15s ease infinite; }    
+
+  @-webkit-keyframes Cycler {
+    0% {
+      color: black }
+    50% {
+      color: whitesmoke }
+    100% {
+      color: red; } }
+  .rating {
+    text-transform: uppercase;
+    color: #ffffff; }
+    .rating .btn-group {
+      font-size: 1rem !important;
+      vertical-align: baseline;
+      cursor: pointer;
+      border-color: #ffffff;
+      margin-left: .5rem; }
+  
+  .buttons {
+    margin: 1rem 0; }
+    .buttons label > input {
+      cursor: pointer !important; }
+    .buttons button {
+      margin: .5rem 1rem .5rem 0;
+      border: 1px solid #ffffff;
+      background-color: transparent; }
+      .buttons button:hover, .buttons button:active {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: rgb(180, 46, 5); }
+      .buttons button:focus {
+        box-shadow: none; }
+  
+  .form-control {
+    font-size: 1.1rem;
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+    transition: all .5s linear; }
+    .form-control:focus {
+      border: 1px solid #ffffff;
+      background-color: rgba(255, 255, 255, 0.5); }
+    .form-control::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.5); }
+  
+  .gifs {
+    padding-top: 2rem; }
+    .gifs .card {
+      border: none;
+      background-color: transparent; }
+      .gifs .card img {
+        cursor: pointer;
+        min-width: 100%;
+        max-width: 100%;
+        height: auto; }
+      .gifs .card .card-block {
+        background-color: #ffffff;
+        padding: .75rem 1.25rem;
+        font-size: .85rem; }
+        .gifs .card .card-block a {
+          display: inline-block;
+          margin-right: 1rem;
+          font-size: .9rem;
+          transition: color .2s linear; }
+          .gifs .card .card-block a:hover {
+            text-decoration: none;
+            color: rgb(180, 46, 5); }
+          .gifs .card .card-block a i {
+            margin-right: .3rem; }
+      .gifs .card .card-footer {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.8) !important;
+        border: none;
+        padding: .35rem 1.25rem;
+        font-size: 0.85rem; }
+  
+  /* F#$%ing Bootstrap Overrides */
+  .btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle {
+    background-color: rgb(180, 46, 5) !important;
+    border-color: rgb(180, 46, 5) !important; }
+    .btn-primary.active:hover, .btn-primary:active:hover, .show > .btn-primary.dropdown-toggle:hover {
+      color: #ffffff; }
+  
+  .btn-secondary {
+    font-size: 1rem;
+    cursor: pointer;
+    border-color: white; }
+    .btn-secondary .active, .btn-secondary .focus {
+      box-shadow: none;
+      border-color: white;
+      background-color: rgb(63, 122, 45) !important;
+      color: #ffffff; }
+    .btn-secondary:hover {
+      border-color: white; }
+  
+  .btn-secondary.active {
+    box-shadow: none;
+    background-color: rgb(63, 122, 45) !important;
+    color: #ffffff;
+    border-color: white; }
