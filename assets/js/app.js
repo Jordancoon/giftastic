@@ -13,7 +13,7 @@ var topics = [
   // Gify API stuff
   var endpoint  = "https://api.giphy.com/v1/gifs/search";
   var gifyAPI   = "5BiqqCsgIvHAkB6bBh1IwDeG7TWAbDnV";
-  var limit     = 15;
+  var limit     = 10;
   var rating    = "g";
   
   /*********************************
@@ -58,8 +58,7 @@ var topics = [
     })
     .done(function(response) {
       // console.log(response);
-      // Clear old gifs
-      $(".card-columns").empty();
+      
       // Loop through results
       var gifArray = response.data;
       for (var i = 0; i < gifArray.length; i++) {
@@ -125,9 +124,6 @@ var topics = [
       this.reset();
     });
   
-    // For some reason, I had to bind the click event using this syntax,
-    // even though click() worked fine for the .topic buttons, which are
-    // also dynamically generated.
     $(".gifs").on("click", ".card-img-top", function() {
       togglePlay(this);
     });
@@ -136,7 +132,7 @@ var topics = [
       event.preventDefault();
     });
   
-    // Tooltip functionality, what a pain in the ass
+    // Tooltip functionality
     // See Bootstrap 4 docs for explanation
     clipboard = new Clipboard('.clip');
     clipboard.on('success', function(e) {
